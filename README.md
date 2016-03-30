@@ -1,2 +1,2 @@
-# go-utility
-Utility functions in Golang
+# go-fileutil
+File utility functions in Golang
