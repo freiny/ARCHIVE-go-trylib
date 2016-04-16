@@ -1,4 +1,4 @@
-package challenges
+package lib
 
 // Reverse returns the input string with its characters reversed
 func Reverse(s string) string {
