@@ -26,3 +26,9 @@ logs
 temp
 tmp
 tramp
+
+# Golang generated files
+main
+
+# Rapid testing
+save-commands.json
