@@ -1,1 +1,1 @@
-# go-challenges
+# go-trylib
