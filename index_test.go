@@ -16,7 +16,7 @@ func Index(s, sep string) int {
 		return 0
 	}
 
-	for i := 0; i < sLen-sepLen; i++ {
+	for i := 0; i <= sLen-sepLen; i++ {
 		if s[i:i+sepLen] == sep {
 			return i
 		}
@@ -37,6 +37,7 @@ var indexTests = []struct {
 	{"abcde", "bc", 1},
 	{"abcde", "ae", -1},
 	{"abcde", "c", 2},
+	{"abcde", "e", 4},
 	{"abcde", "k", -1},
 }
 
