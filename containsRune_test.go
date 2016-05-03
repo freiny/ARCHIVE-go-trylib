@@ -32,7 +32,7 @@ func TestLibContainsRune(t *testing.T) {
 		actual := ContainsRune(test.s, test.r)
 		libOut := strings.ContainsRune(test.s, test.r)
 		if actual != libOut {
-			t.Errorf("ContainsRune(%q, %q) = %t ; %t", test.s, test.r, actual, libOut)
+			t.Errorf("ContainsRune(%q, %q) = %t ; %t wanted", test.s, test.r, actual, libOut)
 		}
 	}
 }
@@ -41,7 +41,7 @@ func TestContainsRune(t *testing.T) {
 	for _, test := range containsRuneTests {
 		actual := ContainsRune(test.s, test.r)
 		if actual != test.out {
-			t.Errorf("ContainsRune(%q, %q) = %t ; %t", test.s, test.r, actual, test.out)
+			t.Errorf("ContainsRune(%q, %q) = %t ; %t wanted", test.s, test.r, actual, test.out)
 		}
 	}
 }

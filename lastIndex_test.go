@@ -16,7 +16,7 @@ func LastIndex(s, sep string) int {
 		if sep == "" {
 			return len(s)
 		}
-		for i := len(s) - len(sep); i > 0; i-- {
+		for i := len(s) - len(sep); i >= 0; i-- {
 			if sp[i:i+len(sep)] == sep {
 				return i
 			}
@@ -35,6 +35,8 @@ var lastIndexTests = []struct {
 	{"a", "", 1},
 	{"a", "a", 0},
 	{"abcde", "", 5},
+	{"abcde", "a", 0},
+	{"abcde", "z", -1},
 	{"abcde", "abcde", 0},
 	{"aaabbbccc", "a", 2},
 	{"aaabbbccc", "b", 5},
@@ -51,7 +53,7 @@ func TestLibLastIndex(t *testing.T) {
 		actual := LastIndex(test.s, test.sep)
 		libOut := strings.LastIndex(test.s, test.sep)
 		if actual != libOut {
-			t.Errorf("LastIndex(%q, %q) = %d ; %d", test.s, test.sep, actual, libOut)
+			t.Errorf("LastIndex(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, libOut)
 		}
 	}
 }
@@ -60,7 +62,7 @@ func TestLastIndex(t *testing.T) {
 	for _, test := range lastIndexTests {
 		actual := LastIndex(test.s, test.sep)
 		if actual != test.out {
-			t.Errorf("LastIndex(%q, %q) = %d ; %d", test.s, test.sep, actual, test.out)
+			t.Errorf("LastIndex(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, test.out)
 		}
 	}
 }
