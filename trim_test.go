@@ -6,29 +6,8 @@ import (
 )
 
 func Trim(s, cutset string) string {
-	var a, b int
-	m := map[byte]bool{}
-	for i := 0; i < len(cutset); i++ {
-		m[cutset[i]] = true
-	}
-	for i := 0; i < len(s); i++ {
-		if !m[s[i]] {
-			a = i
-			break
-		}
-	}
-	for i := len(s) - 1; i >= 0; i-- {
-		if !m[s[i]] {
-			b = i + 1
-			break
-		}
-	}
-
-	if a == b || a < b {
-		return s[a:b]
-	}
-	return ""
-
+	ret := TrimLeft(s, cutset)
+	return TrimRight(ret, cutset)
 }
 
 var trimTests = []struct {
