@@ -14,22 +14,22 @@ func Count(s, sep string) int {
 	}
 	count := 0
 	sepLen := len(sep)
-	sp := s[0:len(s)]
+	slc := s[0:len(s)]
 	for {
 		switch {
-		case len(sp) == sepLen:
-			if sp == sep {
+		case len(slc) == sepLen:
+			if slc == sep {
 				count++
 			}
 			return count
-		case len(sp) < sepLen:
+		case len(slc) < sepLen:
 			return count
-		case len(sp) > sepLen:
-			if sp[0:sepLen] == sep {
+		case len(slc) > sepLen:
+			if slc[0:sepLen] == sep {
 				count++
-				sp = sp[sepLen:len(sp)]
+				slc = slc[sepLen:len(slc)]
 			} else {
-				sp = sp[1:len(sp)]
+				slc = slc[1:len(slc)]
 			}
 		}
 	}

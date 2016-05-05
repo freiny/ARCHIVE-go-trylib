@@ -7,7 +7,7 @@ import (
 
 func LastIndex(s, sep string) int {
 
-	sp := s[0:len(s)]
+	slc := s[0:len(s)]
 
 	switch {
 	case s == sep:
@@ -17,7 +17,7 @@ func LastIndex(s, sep string) int {
 			return len(s)
 		}
 		for i := len(s) - len(sep); i >= 0; i-- {
-			if sp[i:i+len(sep)] == sep {
+			if slc[i:i+len(sep)] == sep {
 				return i
 			}
 		}
