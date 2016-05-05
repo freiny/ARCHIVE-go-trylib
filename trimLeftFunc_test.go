@@ -27,6 +27,8 @@ var trimLeftFuncTests = []struct {
 	{"a", func(r rune) bool { return r == rune('a') }, ""},
 	{"a", func(r rune) bool { return r == rune('b') }, "a"},
 
+	{"aaaaa", func(r rune) bool { return r == rune('a') }, ""},
+
 	{"abcab", func(r rune) bool { return r == rune('a') }, "bcab"},
 	{"abcab", func(r rune) bool { return r == rune('c') }, "abcab"},
 	{"abcab", func(r rune) bool { return r == rune('b') }, "abcab"},
@@ -47,12 +49,15 @@ var trimLeftFuncTests = []struct {
 	{"ababbaab", func(r rune) bool { return r == rune('b') || r == rune('a') }, ""},
 	{"ababbaab", func(r rune) bool { return r == rune('a') || r == rune('D') || r == rune('b') }, ""},
 	{"ababbaab", func(r rune) bool { return r == rune('b') || r == rune('D') || r == rune('a') }, ""},
+
+	{"abcab", func(r rune) bool { return r == rune('a') || r == rune('b') || r == rune('c') }, ""},
 }
 
 func TestLibTrimLeftFunc(t *testing.T) {
 	for _, test := range trimLeftFuncTests {
 		actual := TrimLeftFunc(test.s, test.f)
 		libOut := strings.TrimLeftFunc(test.s, test.f)
+		// if true {
 		if actual != libOut {
 			t.Errorf("TrimLeftFunc(%q, %T) = %q, %q wanted", test.s, test.f, actual, libOut)
 		}
