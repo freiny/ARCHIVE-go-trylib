@@ -6,29 +6,7 @@ import (
 )
 
 func TrimLeft(s, cutset string) string {
-
-	inCutset := map[byte]bool{}
-	for i := 0; i < len(cutset); i++ {
-		inCutset[cutset[i]] = true
-	}
-
-	sLen := len(s)
-	start := 0
-	for i := 0; i < sLen; i++ {
-		start = i
-		if !inCutset[s[i]] {
-			break
-		}
-	}
-	if start == sLen-1 && inCutset[s[sLen-1]] {
-		start++
-	}
-
-	if start <= sLen {
-		return s[start:]
-	}
-	return ""
-
+	return TrimLeftFunc(s, func(r rune) bool { return ContainsAny(string(r), cutset) })
 }
 
 var trimLeftTests = []struct {
