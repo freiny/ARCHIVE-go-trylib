@@ -6,20 +6,10 @@ import (
 )
 
 func TrimSuffix(s, suffix string) string {
-	sLen := len(s)
-	sufLen := len(suffix)
-
-	switch {
-	case suffix == "" || sLen < sufLen:
-		return s
-	case sLen >= sufLen:
-		if s[sLen-sufLen:] == suffix {
-			return s[:sLen-sufLen]
-		}
-		return s
-	default:
-		return ""
+	if HasSuffix(s, suffix) {
+		return s[:len(s)-len(suffix)]
 	}
+	return s
 }
 
 var trimSuffixTests = []struct {

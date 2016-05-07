@@ -6,20 +6,10 @@ import (
 )
 
 func TrimPrefix(s, prefix string) string {
-	sLen := len(s)
-	pLen := len(prefix)
-
-	switch {
-	case prefix == "" || sLen < pLen:
-		return s
-	case sLen >= pLen:
-		if s[0:pLen] == prefix {
-			return s[pLen:]
-		}
-		return s
-	default:
-		return ""
+	if HasPrefix(s, prefix) {
+		return s[len(prefix):]
 	}
+	return s
 }
 
 var trimPrefixTests = []struct {
