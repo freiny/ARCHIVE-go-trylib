@@ -3,12 +3,22 @@ package fStrings
 import (
 	"strings"
 	"testing"
+	"unicode"
 )
 
 func Map(mapping func(rune) rune, s string) string {
+	// ret := ""
+	// for i := 0; i < len(s); i++ {
+	// 	m := mapping(rune(s[i]))
+	// 	if m >= 0 {
+	// 		ret += string(m)
+	// 	}
+	// }
+	// return ret
+
 	ret := ""
-	for i := 0; i < len(s); i++ {
-		m := mapping(rune(s[i]))
+	for _, cp := range s {
+		m := mapping(cp)
 		if m >= 0 {
 			ret += string(m)
 		}
@@ -40,6 +50,11 @@ var mapTests = []struct {
 	{func(r rune) rune {
 		return r - 1000
 	}, "aabbcc", ""},
+
+	{unicode.ToUpper, "\u00E0", "À"},
+	{unicode.ToUpper, "\u1E01\u1E03\u1E05\u1E07", "ḀḂḄḆ"},
+	{unicode.ToUpper, "ḝ", "Ḝ"},
+	{unicode.ToUpper, "ḝḟḡḣ", "ḜḞḠḢ"},
 }
 
 func TestLibMap(t *testing.T) {
