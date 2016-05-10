@@ -27,9 +27,9 @@ var indexByteTests = []struct {
 func TestLibIndexByte(t *testing.T) {
 	for _, test := range indexByteTests {
 		actual := IndexByte(test.s, test.c)
-		libOut := strings.IndexByte(test.s, test.c)
-		if actual != libOut {
-			t.Errorf("IndexByte(%q, %q) = %d ; %d wanted", test.s, test.c, actual, libOut)
+		libout := strings.IndexByte(test.s, test.c)
+		if actual != libout {
+			t.Errorf("IndexByte(%q, %q) = %d ; %d wanted", test.s, test.c, actual, libout)
 		}
 	}
 }

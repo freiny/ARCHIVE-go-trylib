@@ -32,9 +32,9 @@ var lastIndexByteTests = []struct {
 func TestLibLastIndexByte(t *testing.T) {
 	for _, test := range lastIndexByteTests {
 		actual := LastIndexByte(test.s, test.c)
-		libOut := strings.LastIndexByte(test.s, test.c)
-		if actual != libOut {
-			t.Errorf("LastIndexByte(%q, %q) = %d ; %d wanted", test.s, test.c, actual, libOut)
+		libout := strings.LastIndexByte(test.s, test.c)
+		if actual != libout {
+			t.Errorf("LastIndexByte(%q, %q) = %d ; %d wanted", test.s, test.c, actual, libout)
 		}
 	}
 }

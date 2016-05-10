@@ -43,9 +43,9 @@ var joinTests = []struct {
 func TestLibJoin(t *testing.T) {
 	for _, test := range joinTests {
 		actual := Join(test.a, test.sep)
-		libOut := strings.Join(test.a, test.sep)
-		if actual != libOut {
-			t.Errorf("Join(%q, %q) = %q ; %q wanted", test.a, test.sep, actual, libOut)
+		libout := strings.Join(test.a, test.sep)
+		if actual != libout {
+			t.Errorf("Join(%q, %q) = %q ; %q wanted", test.a, test.sep, actual, libout)
 		}
 	}
 }

@@ -45,9 +45,9 @@ var mapTests = []struct {
 func TestLibMap(t *testing.T) {
 	for _, test := range mapTests {
 		actual := Map(test.mapping, test.s)
-		libOut := strings.Map(test.mapping, test.s)
-		if actual != libOut {
-			t.Errorf("Map(%T, %q) = %q ; %q wanted", test.mapping, test.s, actual, libOut)
+		libout := strings.Map(test.mapping, test.s)
+		if actual != libout {
+			t.Errorf("Map(%T, %q) = %q ; %q wanted", test.mapping, test.s, actual, libout)
 		}
 	}
 }

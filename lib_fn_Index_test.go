@@ -45,9 +45,9 @@ func TestLibIndex(t *testing.T) {
 
 	for _, test := range indexTests {
 		actual := Index(test.s, test.sep)
-		libOut := strings.Index(test.s, test.sep)
-		if actual != libOut {
-			t.Errorf("Index(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, libOut)
+		libout := strings.Index(test.s, test.sep)
+		if actual != libout {
+			t.Errorf("Index(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, libout)
 		}
 
 	}

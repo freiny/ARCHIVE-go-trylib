@@ -48,9 +48,9 @@ var hasPrefixTests = []struct {
 func TestLibHasPrefix(t *testing.T) {
 	for _, test := range hasPrefixTests {
 		actual := HasPrefix(test.s, test.prefix)
-		libOut := strings.HasPrefix(test.s, test.prefix)
-		if actual != libOut {
-			t.Errorf("HasPrefix(%q, %q) = %t ; %t wanted", test.s, test.prefix, actual, libOut)
+		libout := strings.HasPrefix(test.s, test.prefix)
+		if actual != libout {
+			t.Errorf("HasPrefix(%q, %q) = %t ; %t wanted", test.s, test.prefix, actual, libout)
 		}
 	}
 

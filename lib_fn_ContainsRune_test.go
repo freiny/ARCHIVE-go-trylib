@@ -30,9 +30,9 @@ var containsRuneTests = []struct {
 func TestLibContainsRune(t *testing.T) {
 	for _, test := range containsRuneTests {
 		actual := ContainsRune(test.s, test.r)
-		libOut := strings.ContainsRune(test.s, test.r)
-		if actual != libOut {
-			t.Errorf("ContainsRune(%q, %q) = %t ; %t wanted", test.s, test.r, actual, libOut)
+		libout := strings.ContainsRune(test.s, test.r)
+		if actual != libout {
+			t.Errorf("ContainsRune(%q, %q) = %t ; %t wanted", test.s, test.r, actual, libout)
 		}
 	}
 }

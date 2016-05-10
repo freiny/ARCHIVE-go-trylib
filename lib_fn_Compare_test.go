@@ -36,9 +36,9 @@ func TestLibCompare(t *testing.T) {
 
 	for _, test := range compareTests {
 		actual := Compare(test.a, test.b)
-		libOut := strings.Compare(test.a, test.b)
-		if actual != libOut {
-			t.Errorf("Compare(%q, %q) = %d ; %d wanted", test.a, test.b, actual, libOut)
+		libout := strings.Compare(test.a, test.b)
+		if actual != libout {
+			t.Errorf("Compare(%q, %q) = %d ; %d wanted", test.a, test.b, actual, libout)
 		}
 	}
 

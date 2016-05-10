@@ -59,9 +59,9 @@ var countTests = []struct {
 func TestLibCount(t *testing.T) {
 	for _, test := range countTests {
 		actual := Count(test.s, test.sep)
-		libOut := strings.Count(test.s, test.sep)
-		if actual != libOut {
-			t.Errorf("Count(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, libOut)
+		libout := strings.Count(test.s, test.sep)
+		if actual != libout {
+			t.Errorf("Count(%q, %q) = %d ; %d wanted", test.s, test.sep, actual, libout)
 		}
 	}
 }

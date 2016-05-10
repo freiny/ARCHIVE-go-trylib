@@ -27,9 +27,9 @@ var indexRuneTests = []struct {
 func TestLibIndexRune(t *testing.T) {
 	for _, test := range indexRuneTests {
 		actual := IndexRune(test.s, test.r)
-		libOut := strings.IndexRune(test.s, test.r)
-		if actual != libOut {
-			t.Errorf("IndexRune(%q, %q) = %d ; %d wanted", test.s, test.r, actual, libOut)
+		libout := strings.IndexRune(test.s, test.r)
+		if actual != libout {
+			t.Errorf("IndexRune(%q, %q) = %d ; %d wanted", test.s, test.r, actual, libout)
 		}
 	}
 }

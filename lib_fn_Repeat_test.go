@@ -29,9 +29,9 @@ var repeatTests = []struct {
 func TestLibRepeat(t *testing.T) {
 	for _, test := range repeatTests {
 		actual := Repeat(test.s, test.count)
-		libOut := strings.Repeat(test.s, test.count)
-		if actual != libOut {
-			t.Errorf("Repeat(%q, %d) = %q ; %q wanted", test.s, test.count, actual, libOut)
+		libout := strings.Repeat(test.s, test.count)
+		if actual != libout {
+			t.Errorf("Repeat(%q, %d) = %q ; %q wanted", test.s, test.count, actual, libout)
 		}
 	}
 }

@@ -44,9 +44,9 @@ var trimPrefixTests = []struct {
 func TestLibTrimPrefix(t *testing.T) {
 	for _, test := range trimPrefixTests {
 		actual := TrimPrefix(test.s, test.prefix)
-		libOut := strings.TrimPrefix(test.s, test.prefix)
-		if actual != libOut {
-			t.Errorf("TrimPrefix(%q, %q) = %q ; %q wanted", test.s, test.prefix, actual, libOut)
+		libout := strings.TrimPrefix(test.s, test.prefix)
+		if actual != libout {
+			t.Errorf("TrimPrefix(%q, %q) = %q ; %q wanted", test.s, test.prefix, actual, libout)
 		}
 	}
 }

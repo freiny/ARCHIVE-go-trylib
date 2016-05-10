@@ -31,9 +31,9 @@ var containsAnyTests = []struct {
 func TestLibContainsAny(t *testing.T) {
 	for _, test := range containsAnyTests {
 		actual := ContainsAny(test.s, test.chars)
-		libOut := strings.ContainsAny(test.s, test.chars)
-		if actual != libOut {
-			t.Errorf("ContainsAny(%q, %q) = %t ; %t wanted", test.s, test.chars, actual, libOut)
+		libout := strings.ContainsAny(test.s, test.chars)
+		if actual != libout {
+			t.Errorf("ContainsAny(%q, %q) = %t ; %t wanted", test.s, test.chars, actual, libout)
 		}
 	}
 

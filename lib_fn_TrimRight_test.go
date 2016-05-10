@@ -42,9 +42,9 @@ var trimRightTests = []struct {
 func TestLibTrimRight(t *testing.T) {
 	for _, test := range trimRightTests {
 		actual := TrimRight(test.s, test.cutset)
-		libOut := strings.TrimRight(test.s, test.cutset)
-		if actual != libOut {
-			t.Errorf("TrimRight(%q, %q) = %q ; %q wanted", test.s, test.cutset, actual, libOut)
+		libout := strings.TrimRight(test.s, test.cutset)
+		if actual != libout {
+			t.Errorf("TrimRight(%q, %q) = %q ; %q wanted", test.s, test.cutset, actual, libout)
 		}
 	}
 }

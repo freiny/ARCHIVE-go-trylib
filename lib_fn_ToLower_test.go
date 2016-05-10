@@ -32,9 +32,9 @@ var toLowerTests = []struct {
 func TestLibToLower(t *testing.T) {
 	for _, test := range toLowerTests {
 		actual := ToLower(test.s)
-		libOut := strings.ToLower(test.s)
-		if actual != libOut {
-			t.Errorf("ToLower(%q) = %q ; %q wanted", test.s, actual, libOut)
+		libout := strings.ToLower(test.s)
+		if actual != libout {
+			t.Errorf("ToLower(%q) = %q ; %q wanted", test.s, actual, libout)
 		}
 	}
 }

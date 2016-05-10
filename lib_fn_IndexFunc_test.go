@@ -39,9 +39,9 @@ var indexFuncTests = []struct {
 func TestLibIndexFunc(t *testing.T) {
 	for _, test := range indexFuncTests {
 		actual := IndexFunc(test.s, test.f)
-		libOut := strings.IndexFunc(test.s, test.f)
-		if actual != libOut {
-			t.Errorf("IndexFunc(%q, %T) = %d, %d wanted", test.s, test.f, actual, libOut)
+		libout := strings.IndexFunc(test.s, test.f)
+		if actual != libout {
+			t.Errorf("IndexFunc(%q, %T) = %d, %d wanted", test.s, test.f, actual, libout)
 		}
 	}
 }

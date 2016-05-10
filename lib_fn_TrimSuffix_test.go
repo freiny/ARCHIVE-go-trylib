@@ -44,9 +44,9 @@ var trimSuffixTests = []struct {
 func TestLibTrimSuffix(t *testing.T) {
 	for _, test := range trimSuffixTests {
 		actual := TrimSuffix(test.s, test.suffix)
-		libOut := strings.TrimSuffix(test.s, test.suffix)
-		if actual != libOut {
-			t.Errorf("TrimSuffix(%q, %q) = %q ; %q wanted", test.s, test.suffix, actual, libOut)
+		libout := strings.TrimSuffix(test.s, test.suffix)
+		if actual != libout {
+			t.Errorf("TrimSuffix(%q, %q) = %q ; %q wanted", test.s, test.suffix, actual, libout)
 		}
 	}
 }

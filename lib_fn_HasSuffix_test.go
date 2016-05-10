@@ -49,9 +49,9 @@ var hasSuffixTests = []struct {
 func TestLibHasSuffix(t *testing.T) {
 	for _, test := range hasSuffixTests {
 		actual := HasSuffix(test.s, test.suffix)
-		libOut := strings.HasSuffix(test.s, test.suffix)
-		if actual != libOut {
-			t.Errorf("HasSuffix(%q, %q) = %t ; %t wanted", test.s, test.suffix, actual, libOut)
+		libout := strings.HasSuffix(test.s, test.suffix)
+		if actual != libout {
+			t.Errorf("HasSuffix(%q, %q) = %t ; %t wanted", test.s, test.suffix, actual, libout)
 		}
 	}
 }

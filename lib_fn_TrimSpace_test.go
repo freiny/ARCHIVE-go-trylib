@@ -63,9 +63,9 @@ var trimSpaceTests = []struct {
 func TestLibTrimSpace(t *testing.T) {
 	for _, test := range trimSpaceTests {
 		actual := TrimSpace(test.s)
-		libOut := strings.TrimSpace(test.s)
-		if actual != libOut {
-			t.Errorf("TrimSpace(%q) = %q ; %q wanted", test.s, actual, libOut)
+		libout := strings.TrimSpace(test.s)
+		if actual != libout {
+			t.Errorf("TrimSpace(%q) = %q ; %q wanted", test.s, actual, libout)
 		}
 	}
 }

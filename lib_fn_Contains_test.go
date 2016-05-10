@@ -33,9 +33,9 @@ var containsTests = []struct {
 func TestLibContains(t *testing.T) {
 	for _, test := range containsTests {
 		actual := Contains(test.s, test.sub)
-		libOut := strings.Contains(test.s, test.sub)
-		if actual != libOut {
-			t.Errorf("Contains(%q, %q) = %t ; %t wanted", test.s, test.sub, actual, libOut)
+		libout := strings.Contains(test.s, test.sub)
+		if actual != libout {
+			t.Errorf("Contains(%q, %q) = %t ; %t wanted", test.s, test.sub, actual, libout)
 		}
 	}
 }

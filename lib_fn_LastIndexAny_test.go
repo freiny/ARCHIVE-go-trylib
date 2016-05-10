@@ -45,9 +45,9 @@ var lastIndexAnyTests = []struct {
 func TestLibLastIndexAny(t *testing.T) {
 	for _, test := range lastIndexAnyTests {
 		actual := LastIndexAny(test.s, test.chars)
-		libOut := strings.LastIndexAny(test.s, test.chars)
-		if actual != libOut {
-			t.Errorf("LastIndexAny(%q, %q) = %d ; %d wanted", test.s, test.chars, actual, libOut)
+		libout := strings.LastIndexAny(test.s, test.chars)
+		if actual != libout {
+			t.Errorf("LastIndexAny(%q, %q) = %d ; %d wanted", test.s, test.chars, actual, libout)
 		}
 	}
 }

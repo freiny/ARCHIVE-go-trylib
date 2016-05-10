@@ -32,9 +32,9 @@ var toUpperTests = []struct {
 func TestLibToUpper(t *testing.T) {
 	for _, test := range toUpperTests {
 		actual := ToUpper(test.s)
-		libOut := strings.ToUpper(test.s)
-		if actual != libOut {
-			t.Errorf("ToUpper(%q) = %q ; %q wanted", test.s, actual, libOut)
+		libout := strings.ToUpper(test.s)
+		if actual != libout {
+			t.Errorf("ToUpper(%q) = %q ; %q wanted", test.s, actual, libout)
 		}
 	}
 }

@@ -39,9 +39,9 @@ var indexAnyTests = []struct {
 func TestLibIndexAny(t *testing.T) {
 	for _, test := range indexAnyTests {
 		actual := IndexAny(test.s, test.chars)
-		libOut := strings.IndexAny(test.s, test.chars)
-		if actual != libOut {
-			t.Errorf("IndexAny(%q, %q) = %d ; %d wanted", test.s, test.chars, actual, libOut)
+		libout := strings.IndexAny(test.s, test.chars)
+		if actual != libout {
+			t.Errorf("IndexAny(%q, %q) = %d ; %d wanted", test.s, test.chars, actual, libout)
 		}
 	}
 }
