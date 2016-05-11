@@ -29,12 +29,12 @@ SplitAfter(s, sep string) []string
 SplitAfterN(s, sep string, n int) []string
 SplitN(s, sep string, n int) []string
 Title(s string) string
-ToLower(s string) string
-ToLowerSpecial(_case unicode.SpecialCase, s string) string
+- ToLower(s string) string
+- ToLowerSpecial(_case unicode.SpecialCase, s string) string
 ToTitle(s string) string
 ToTitleSpecial(_case unicode.SpecialCase, s string) string
-ToUpper(s string) string
-ToUpperSpecial(_case unicode.SpecialCase, s string) string
+- ToUpper(s string) string
+- ToUpperSpecial(_case unicode.SpecialCase, s string) string
 - Trim(s string, cutset string) string
 - TrimFunc(s string, f func(rune) bool) string
 - TrimLeft(s string, cutset string) string
