@@ -31,7 +31,7 @@ Replace(s, old, new string, n int) string
 - Title(s string) string
 - ToLower(s string) string
 - ToLowerSpecial(_case unicode.SpecialCase, s string) string
-ToTitle(s string) string
+- ToTitle(s string) string
 ToTitleSpecial(_case unicode.SpecialCase, s string) string
 - ToUpper(s string) string
 - ToUpperSpecial(_case unicode.SpecialCase, s string) string
