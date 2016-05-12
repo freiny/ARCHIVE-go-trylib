@@ -8,18 +8,12 @@ import (
 
 func SplitAfter(s, sep string) []string {
 	switch {
-	// case n == 0:
-	// 	var ret []string
-	// 	return ret
 	case s == "" && sep == "":
 		return make([]string, 0)
-		// case n == 1:
-		// 	return []string{s}
-		// case s == sep:
-		// 	return []string{"", ""}
 	case sep == "" || Index(s, sep) == -1:
 		return []string{s}
 	}
+
 	a := SplitN(s, sep, -1)
 
 	ret := make([]string, 0, 256)
