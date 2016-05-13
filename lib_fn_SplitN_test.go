@@ -41,7 +41,6 @@ func SplitN(s, sep string, n int) []string {
 
 }
 
-var none []string
 var splitNTests = []struct {
 	s, sep string
 	n      int

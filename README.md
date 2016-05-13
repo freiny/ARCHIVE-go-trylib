@@ -7,8 +7,8 @@
 - ContainsRune(s string, r rune) bool
 - Count(s, sep string) int
 EqualFold(s, t string) bool
-Fields(s string) []string
-FieldsFunc(s string, f func(rune) bool) []string
+- Fields(s string) []string
+- FieldsFunc(s string, f func(rune) bool) []string
 - HasPrefix(s, prefix string) bool
 - HasSuffix(s, suffix string) bool
 - Index(s, sep string) int
@@ -32,7 +32,7 @@ Replace(s, old, new string, n int) string
 - ToLower(s string) string
 - ToLowerSpecial(_case unicode.SpecialCase, s string) string
 - ToTitle(s string) string
-ToTitleSpecial(_case unicode.SpecialCase, s string) string
+- ToTitleSpecial(_case unicode.SpecialCase, s string) string
 - ToUpper(s string) string
 - ToUpperSpecial(_case unicode.SpecialCase, s string) string
 - Trim(s string, cutset string) string
