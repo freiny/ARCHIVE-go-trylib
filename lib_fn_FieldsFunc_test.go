@@ -56,7 +56,7 @@ func TestLibFieldsFunc(t *testing.T) {
 		actual := FieldsFunc(test.s, test.f)
 		libout := strings.FieldsFunc(test.s, test.f)
 		if !reflect.DeepEqual(actual, libout) {
-			t.Errorf("FieldsFunc(%q, %T) = %q ; %q wanted %d %d", test.s, test.f, actual, libout, len(actual), len(libout))
+			t.Errorf("FieldsFunc(%q, %T) = %q ; %q wanted", test.s, test.f, actual, libout)
 		}
 	}
 }
