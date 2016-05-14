@@ -23,7 +23,7 @@ EqualFold(s, t string) bool
 - LastIndexFunc(s string, f func(rune) bool) int
 - Map(mapping func(rune) rune, s string) string
 - Repeat(s string, count int) string
-Replace(s, old, new string, n int) string
+- Replace(s, old, new string, n int) string
 - Split(s, sep string) []string
 - SplitAfter(s, sep string) []string
 - SplitAfterN(s, sep string, n int) []string
