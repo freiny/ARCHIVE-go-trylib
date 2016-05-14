@@ -6,7 +6,7 @@
 - ContainsAny(s, chars string) bool
 - ContainsRune(s string, r rune) bool
 - Count(s, sep string) int
-EqualFold(s, t string) bool
+- EqualFold(s, t string) bool
 - Fields(s string) []string
 - FieldsFunc(s string, f func(rune) bool) []string
 - HasPrefix(s, prefix string) bool
